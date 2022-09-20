@@ -1,8 +1,9 @@
 package com.example.demoapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        var sendButton = findViewById(R.id.send);
+        sendButton.setOnClickListener(
+                view -> Log.i("MainActivity", "Button Send gedrückt"));
     }
 }
